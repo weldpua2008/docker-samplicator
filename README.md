@@ -10,13 +10,13 @@ These are base docker images that include samplicator.
 ## Description
 A generic UDP proxy/duplicator.  Forwards UDP requests to defined hosts.  I am currently using this as an SNMP trap proxy.  For a working example, run:
 
-    docker run -d --name trap_sink elcolio/net-snmp
+    docker run -d --name trap_sink weldpua2008/net-snmp
     export TRAPSINK=`docker inspect -f '{{ .NetworkSettings.IPAddress }}' trap_sink`
-    docker run -d --name trap_dest elcolio/net-snmp
+    docker run -d --name trap_dest weldpua2008/net-snmp
     export TRAPDEST=`docker inspect -f '{{ .NetworkSettings.IPAddress }}' trap_dest`
     docker run -d --name trap_proxy weldpua2008/samplicator -d 3 -p 162 -S $TRAPSINK/162 $TRAPDEST/162
     export TRAP_PROXY=`docker inspect -f '{{ .NetworkSettings.IPAddress }}' trap_proxy`
-    docker run --rm=true elcolio/net-snmp snmptrap -v 1 -c public $TRAP_PROXY .1.3.6.1.6.3 "" 0 0 coldStart.0
+    docker run --rm=true weldpua2008/net-snmp snmptrap -v 1 -c public $TRAP_PROXY .1.3.6.1.6.3 "" 0 0 coldStart.0
 
 This will start 2 trap receivers (trap_sink is a local logging receiver and trap_dest is the real receiver) and send a coldStart trap to the proxy.  Since debugging is turned on, you'll be able to see the packet come through the proxy (using docker logs trap_proxy).  Then you can examine /trap.log on the receivers to see the content (using [docker-enter][1] it would be docker-enter trap_sink cat trap.log)
 
@@ -24,7 +24,7 @@ This will start 2 trap receivers (trap_sink is a local logging receiver and trap
 https://github.com/sleinen/samplicator
 
 ## Usage
-To see this help on the CLI:  **docker run --rm=true elcolio/samplicator -h**
+To see this help on the CLI:  **docker run --rm=true weldpua2008/samplicator -h**
 
     This is samplicate, version 1.3.7-beta6.
     Usage: samplicate [option...] receiver...
@@ -72,7 +72,7 @@ Requirements
 Obtaining these Images from DockerHub
 =====================================
 
-This content on DockerHub lives at https://hub.docker.com/r/weldpua2008/docker-samplicator/
+This content on DockerHub lives at https://hub.docker.com/r/weldpua2008/samplicator/
 
 * This images on DockerHub will be updated periodically.
 
