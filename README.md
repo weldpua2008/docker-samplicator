@@ -2,7 +2,6 @@
 [![Docker Stars](https://img.shields.io/docker/stars/weldpua2008/samplicator.svg)](https://hub.docker.com/r/weldpua2008/samplicator/)
 [![dockeri.co](http://dockeri.co/image/weldpua2008/samplicator)](https://hub.docker.com/r/weldpua2008/samplicator/)
 
-
 docker-samplicator
 ===================
 These are base docker images that include samplicator.  
