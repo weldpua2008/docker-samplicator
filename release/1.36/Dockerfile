@@ -16,7 +16,6 @@ RUN export SAMPLICATOR_VERSION=1.3.6 && \
     ./configure && \
     make && \
     make install && \
-    apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false $buildDeps && \
     rm -r /var/lib/apt/lists/* && \
     cd / && \
     rm -rf $SAMPLICATOR_BUIL_ROOT
