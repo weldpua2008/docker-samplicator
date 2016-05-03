@@ -6,7 +6,7 @@ RUN export SAMPLICATOR_VERSION=1.3.8rc1 && \
     export SAMPLICATOR_BUIL_ROOT=/tmp/samplicator && \
     export SAMPLICATOR_URL=https://github.com/sleinen/samplicator/releases/download/v$SAMPLICATOR_VERSION/samplicator-$SAMPLICATOR_VERSION.tar.gz && \
     export SAMPLICATOR_FILE=samplicator-$SAMPLICATOR_VERSION.tar.gz &&\
-    export buildDeps="tar build-essential" && \
+    export buildDeps="tar build-essential automake" && \
     apt-get update && apt-get -y install $buildDeps && \
     apt-get install --no-install-recommends wget -y && \
     mkdir -p $SAMPLICATOR_BUIL_ROOT && \
