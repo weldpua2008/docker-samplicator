@@ -5,7 +5,7 @@ MAINTAINER Valeriy Solovyov <weldpua2008@gmail.com>
 RUN set -x && \
     export SAMPLICATOR_VERSION=1.3.8rc1 && \
     export SAMPLICATOR_BUIL_ROOT=/tmp/samplicator && \
-    export SAMPLICATOR_URL=https://github.com/sleinen/samplicator/releases/download/v$SAMPLICATOR_VERSION/samplicator-$SAMPLICATOR_VERSION.tar.gz && \
+    export SAMPLICATOR_URL=https://github.com/sleinen/samplicator/releases/download/$SAMPLICATOR_VERSION/samplicator-$SAMPLICATOR_VERSION.tar.gz && \
     export SAMPLICATOR_FILE=samplicator-$SAMPLICATOR_VERSION.tar.gz &&\
     export buildDeps="tar build-essential automake autoconf autogen libtool" && \
     export DEBIAN_FRONTEND=noninteractive && \
