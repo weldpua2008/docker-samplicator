@@ -7,7 +7,7 @@ RUN export SAMPLICATOR_VERSION=master && \
     export SAMPLICATOR_FILE=samplicator-$SAMPLICATOR_VERSION.tar.gz &&\
     export SAMPLICATOR_GIT_REPO=https://github.com/sleinen/samplicator.git && \
     apt-get update && apt-get -y install build-essential libtool && \
-    apt-get install automake git autoconf -y && \
+    apt-get install automake libtool  autogen  git autoconf -y && \
     mkdir -p $SAMPLICATOR_BUIL_ROOT && \
     rm -rf $SAMPLICATOR_BUIL_ROOT  && \
     git config --global http.sslVerify false && \
