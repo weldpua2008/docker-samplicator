@@ -21,7 +21,6 @@ RUN export SAMPLICATOR_VERSION=1.3.6 && \
     cd / && \
     rm -rf $SAMPLICATOR_BUIL_ROOT
 
-
 #ln -s /$SAMPLICATOR_BUIL_ROOT/samplicate /usr/bin/samplicate
 
 ENTRYPOINT ["samplicate"]
