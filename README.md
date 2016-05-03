@@ -1,4 +1,4 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/weldpua2008/docker-samplicator.svg)](https://hub.docker.com/r/weldpua2008/docker-samplicator/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/weldpua2008/samplicator.svg)](https://hub.docker.com/r/weldpua2008/samplicator/)
 [![Docker Stars](https://img.shields.io/docker/stars/weldpua2008/samplicator.svg)](https://hub.docker.com/r/weldpua2008/samplicator/)
 [![dockeri.co](http://dockeri.co/image/weldpua2008/samplicator)](https://hub.docker.com/r/weldpua2008/samplicator/)
 
